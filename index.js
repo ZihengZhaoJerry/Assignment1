@@ -21,7 +21,7 @@ const dbUri = `mongodb+srv://${dbUser}:${dbPass}@${dbHost}/${dbName}?retryWrites
 
 
 // Connect to MongoDB
-mongoose.connect(dbUri, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(dbUri);
 
 // Define User schema
 const userSchema = new mongoose.Schema({

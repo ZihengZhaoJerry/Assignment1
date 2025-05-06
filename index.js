@@ -133,7 +133,7 @@ app.get('/members', (req, res) => {
     return res.redirect('/');
   }
 
-  const images = ['cat1.jpg', 'cat2.jpg', 'cat3.jpg'];
+  const images = ['Cat1.jpg', 'Cat2.jpg', 'Cat3.jpg'];
   const randomImage = images[Math.floor(Math.random() * images.length)];
   const name = req.session.user.name;
 

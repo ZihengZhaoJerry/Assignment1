@@ -53,12 +53,12 @@ app.get('/', (req, res) => {
   res.render('home', { user });
 });
 
-// Sign Up (GET)
+// Sign Up GET
 app.get('/signup', (req, res) => {
   res.render('signup', { error: null });
 });
 
-// Sign Up (POST)
+// Sign Up POST
 app.post('/signup', async (req, res) => {
   const { name, email, password } = req.body;
 
@@ -89,12 +89,12 @@ app.post('/signup', async (req, res) => {
   res.redirect('/members');
 });
 
-// Log In (GET)
+// Log In GET
 app.get('/login', (req, res) => {
   res.render('login', { error: null });
 });
 
-// Log In (POST)
+// Log In POST
 app.post('/login', async (req, res) => {
   const { email, password } = req.body;
 

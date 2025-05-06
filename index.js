@@ -17,12 +17,11 @@ const dbPass = process.env.MONGODB_PASSWORD;
 const dbHost = process.env.MONGODB_HOST;
 const dbName = process.env.MONGODB_DATABASE;
 
-const dbUri = `mongodb+srv://${encodeURIComponent(dbUser)}:${encodeURIComponent(dbPass)}@${dbHost}/${dbName}?retryWrites=true&w=majority`;
+const dbUri = `mongodb+srv://${dbUser}:${dbPass}@${dbHost}/${dbName}?retryWrites=true&w=majority`;
 
 
 // Connect to MongoDB
 mongoose.connect(dbUri);
-  
 
 // Define User schema
 const userSchema = new mongoose.Schema({

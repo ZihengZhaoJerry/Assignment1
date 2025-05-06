@@ -21,10 +21,7 @@ const dbUri = `mongodb+srv://${encodeURIComponent(dbUser)}:${encodeURIComponent(
 
 
 // Connect to MongoDB
-mongoose.connect(dbUri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+mongoose.connect(dbUri);
   
 
 // Define User schema
